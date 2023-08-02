@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles/10-Rock-Paper-Scissors.css">
+</head>
+<body>
+    
+    <div>
+        <p class="title">Rock Paper Scissors</p>
+        <button class="general-btn" onclick="
+            pickComputerMove();
+            controlGame(compChoise,'rock');
+            updateMovesElement('rock');
+            updateResulElement();
+        "><img class="img-css" src="rock-emoji.png" alt="image not found"></button>
+
+        <button class="general-btn" onclick="
+            pickComputerMove();
+            controlGame(compChoise,'paper');
+            updateMovesElement('paper');
+            updateResulElement();
+        "><img class="img-css" src="paper-emoji.png" alt="image not found"></button>
+
+        <button class="general-btn" onclick="
+            pickComputerMove();
+            controlGame(compChoise,'scissors');
+            updateMovesElement('scissors');
+            updateResulElement();
+            
+        "><img class="img-css" src="scissors-emoji.png" alt="image not found"></button>
+        <p class="js-result result-css"></p>
+        <p class="js-moves moves-css">
+            
+        </p>
+        <p class="js-score score-css"></p>
+        <button class="reset-btn" onclick="
+            resetSC();
+        ">Reset Score Board</button>
+    </div>
+    <script src="scripts/10-Rock-Paper-Scissors.js">
+    </script>
+</body>
+</html>

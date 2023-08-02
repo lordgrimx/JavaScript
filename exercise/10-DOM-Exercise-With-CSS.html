@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-Exercise</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .yt-btn-css{
+            background-color: black;
+            text-align: center;
+            color: white;
+            border-radius: 50px;
+            border: none;
+            padding-left: 15px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-right: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 35px;
+        }
+        .yt-btn-css:hover{
+            opacity: 0.8;
+        }
+        .is-subscribed{
+            background-color: rgb(224, 224, 224);
+            text-align: center;
+            color: black;
+            border-radius: 50px;
+            border: none;
+            padding-left: 15px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-right: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 35px;
+        }
+        .amazon-inp{
+            padding: 10px 10px 10px 10px;
+            font-size: 15px;
+        }
+        .cal-btn-css{
+            background-color: green;
+            padding-left: 15px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            padding-right: 15px;
+            color: white;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+        }
+    
+    </style>
+</head>
+<body>
+    <p>YouTube Subscribe Button</p>
+    <button class="yt-btn yt-btn-css" onclick="
+        
+        allButton();
+
+    ">Subscribe</button>
+
+
+    <p>Rock Paper Scissors</p>
+    <a href="">Click Here</a>
+
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders Under $40 = +$10</p>
+    <p>Order Over $40 = FREE Shipping.</p>
+    <input class="amazon-inp" placeholder="Coast Of Order" onkeydown="
+        if(event.key === 'Enter'){
+            calculation();
+            showResult();
+        }
+    ">
+    <button class="cal-btn cal-btn-css" onclick="
+        calculation();
+        showResult();
+    ">Calculate</button>
+    <p class="show-result"></p>
+    <script>
+        let totalPrice = 0;
+
+        function calculation(){
+            
+            const inputElement = document.querySelector('.amazon-inp');
+            let cost = parseInt(inputElement.value);
+            if(cost <= 40){
+                totalPrice = cost + 10;
+            }
+            else{
+                totalPrice = cost;
+            }
+            return totalPrice;
+        }
+        function showResult(){
+            document.querySelector('.show-result').innerHTML = `$${totalPrice}`;
+        }
+
+        function allButton(){
+            const buttonElement = document.querySelector('.yt-btn');
+
+            if(buttonElement.innerText === 'Subscribe'){
+                buttonElement.innerHTML = 'Subscribed';
+                buttonElement.classList.add('is-subscribed');
+                
+            }
+            else if(buttonElement.innerText === 'Subscribed'){
+                buttonElement.innerHTML = 'Subscribe';
+                buttonElement.classList.remove('is-subscribed');
+            }
+        }
+
+    </script>
+</body>
+</html>

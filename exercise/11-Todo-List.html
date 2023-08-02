@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do List</title>
+    <link rel="stylesheet" href="styles/11-Todo-List-Style.css">
+</head>
+<body>
+    <div>
+        <div class="container">
+            <p>Todo List Practice 1</p>
+            <input class="mrgn mrgn-js-1" type="text" placeholder="Todo name">
+            <button onclick="
+                addTodoList();
+                showTodoList();
+            ">Add</button>
+        </div>
+    
+    <div class="container">
+        <p>Todo List Practice 2</p>
+        <input class="mrgn mrgn-js-2" type="text" placeholder="Todo name">
+        <button onclick="
+            addTodoList2();
+            showTodoList2();
+        ">Add</button>
+        <div class="show-todo"></div>
+    </div>
+
+    <div class="container">
+    <p>Todo List</p>
+        <input class="spcl-input js-input" type="text" placeholder="Todo name">
+        <input class="spcl-input js-date" type="date">
+        <button class="green-btn" onclick="
+            addTodoList3();
+            
+        ">Add</button>
+        <div class="show-todo-list"></div>
+    </div>
+    </div>
+    <script src="scripts/11-Todo-List-Js.js"></script>
+</body>
+</html>

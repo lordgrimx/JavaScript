@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-Exercise</title>
+</head>
+<body>
+    <p>YouTube Subscribe Button</p>
+    <button class="yt-btn" onclick="
+        
+        allButton();
+
+    ">Subscribe</button>
+
+
+    <p>Rock Paper Scissors</p>
+    <a href="">Click Here</a>
+
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders Under $40 = +$10</p>
+    <p>Order Over $40 = FREE Shipping.</p>
+    <input class="amazon-inp" placeholder="Coast Of Order" onkeydown="
+        if(event.key === 'Enter'){
+            calculation();
+            showResult();
+        }
+    ">
+    <button class="cal-btn" onclick="
+        calculation();
+        showResult();
+    ">Calculate</button>
+    <p class="show-result"></p>
+    <script>
+        let totalPrice = 0;
+
+        function calculation(){
+            
+            const inputElement = document.querySelector('.amazon-inp');
+            let cost = parseInt(inputElement.value);
+            if(cost <= 40){
+                totalPrice = cost + 10;
+            }
+            else{
+                totalPrice = cost;
+            }
+            return totalPrice;
+        }
+        function showResult(){
+            document.querySelector('.show-result').innerHTML = `$${totalPrice}`;
+        }
+
+        function allButton(){
+            const buttonElement = document.querySelector('.yt-btn');
+
+            if(buttonElement.innerText === 'Subscribe'){
+                buttonElement.innerHTML = 'Subscribed';
+            }
+            else if(buttonElement.innerText === 'Subscribed'){
+                buttonElement.innerHTML = 'Subscribe';
+            }
+        }
+
+    </script>
+</body>
+</html>

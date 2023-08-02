@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    
+    <div>
+        <p>Rock Paper Scissors</p>
+        <button onclick="
+            pickComputerMove();
+            controlGame(compChoise,'rock');
+        ">Rock</button>
+
+        <button onclick="
+            pickComputerMove();
+            controlGame(compChoise,'paper');
+        ">Paper</button>
+
+        <button onclick="
+            pickComputerMove();
+            controlGame(compChoise,'scissors');
+            
+        ">Scissors</button>
+    </div>
+    <script>
+        let draw= 0;
+        let win = 0;
+        let lose = 0;
+        let compChoise = '';
+        function pickComputerMove(){
+            
+            let randomNum = Math.random()*3;
+            
+            if(randomNum>=2){
+                compChoise = 'rock';
+            } 
+            else if(randomNum>=1){
+                compChoise = 'paper';
+            }
+            else{
+                compChoise = 'scissors';
+            }
+            console.log(compChoise);
+
+            return compChoise;
+        }
+        function controlGame(compChoise,situation){
+            if(situation === 'scissors'){
+                if(compChoise === 'rock'){
+                console.log(`Your choise is: ${'scissors'} and Computer choise is: ${compChoise} so, you are lose`);
+                lose++;
+                }
+                else if(compChoise === 'paper'){
+                console.log(`Your choise is: ${'scissors'} and Computer choise is: ${compChoise} so, you are win`);
+                win++;
+                }
+                else if(compChoise === 'scissors'){
+                console.log(`Your choise is: ${'scissors'} and Computer choise is: ${compChoise} so, you are draw`);
+                draw++;
+            }
+            console.log(`Win: ${win}, Lose: ${lose}, Draw: ${draw}`);
+            }
+            else if(situation === 'paper'){
+                if(compChoise === 'rock'){
+                console.log(`Your choise is: ${'paper'} and Computer choise is: ${compChoise} so, you are win`);
+                win++;
+                }
+                else if(compChoise === 'paper'){
+                console.log(`Your choise is: ${'paper'} and Computer choise is: ${compChoise} so, you are draw`);
+                draw++;
+                }
+                else if(compChoise === 'scissors'){
+                console.log(`Your choise is: ${'paper'} and Computer choise is: ${compChoise} so, you are lose`);
+                lose++;
+                }
+                console.log(`Win: ${win}, Lose: ${lose}, Draw: ${draw}`);
+            }
+            else if(situation === 'rock'){
+                if(compChoise === 'rock'){
+                console.log(`Your choise is: ${'rock'} and Computer choise is: ${compChoise} so, you are draw`);
+                draw++;
+                }
+                else if(compChoise === 'paper'){
+                console.log(`Your choise is: ${'rock'} and Computer choise is: ${compChoise} so, you are lose`);
+                lose++;
+                }
+                else if(compChoise === 'scissors'){
+                console.log(`Your choise is: ${'rock'} and Computer choise is: ${compChoise} so, you are win`);
+                win++;
+                }
+                console.log(`Win: ${win}, Lose: ${lose}, Draw: ${draw}`);
+            }
+
+        }
+    </script>
+</body>
+</html>

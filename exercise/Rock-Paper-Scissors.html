@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    
+    <div>
+        <p>Rock Paper Scissors</p>
+        <button onclick="
+            let randomNum = Math.random()*3;
+            let compChoise = '';
+
+
+            if(randomNum>=2){
+                compChoise = 'rock';
+            } 
+            else if(randomNum>=1){
+                compChoise = 'paper';
+            }
+            else{
+                compChoise = 'scissors';
+            }
+            console.log(compChoise);
+
+            if(compChoise === 'rock'){
+                console.log(`Your choise is: ${'rock'} and Computer choise is: ${compChoise} so, you are draw`);
+                draw++;
+            }
+            else if(compChoise === 'paper'){
+                console.log(`Your choise is: ${'rock'} and Computer choise is: ${compChoise} so, you are lose`);
+                lose++;
+            }
+            else if(compChoise === 'scissors'){
+                console.log(`Your choise is: ${'rock'} and Computer choise is: ${compChoise} so, you are win`);
+                win++;
+            }
+            console.log(`Win: ${win}, Lose: ${lose}, Draw: ${draw}`);
+        ">Rock</button>
+
+        <button onclick="
+            let randomNum = Math.random()*3;
+            let compChoise = '';
+
+            if(randomNum>=2){
+                compChoise = 'rock';
+            } 
+            else if(randomNum>=1){
+                compChoise = 'paper';
+            }
+            else{
+                compChoise = 'scissors';
+            }
+            console.log(compChoise);
+
+            if(compChoise === 'rock'){
+                console.log(`Your choise is: ${'paper'} and Computer choise is: ${compChoise} so, you are draw`);
+                win++;
+            }
+            else if(compChoise === 'paper'){
+                console.log(`Your choise is: ${'paper'} and Computer choise is: ${compChoise} so, you are lose`);
+                draw++;
+            }
+            else if(compChoise === 'scissors'){
+                console.log(`Your choise is: ${'paper'} and Computer choise is: ${compChoise} so, you are win`);
+                lose++;
+            }
+            console.log(`Win: ${win}, Lose: ${lose}, Draw: ${draw}`);
+        ">Paper</button>
+
+        <button onclick="
+            let randomNum = Math.random()*3;
+            let compChoise = '';
+
+
+            if(randomNum>=2){
+                compChoise = 'rock';
+            } 
+            else if(randomNum>=1){
+                compChoise = 'paper';
+            }
+            else{
+                compChoise = 'scissors';
+            }
+            console.log(compChoise);
+
+            if(compChoise === 'rock'){
+                console.log(`Your choise is: ${'scissors'} and Computer choise is: ${compChoise} so, you are draw`);
+                lose++;
+            }
+            else if(compChoise === 'paper'){
+                console.log(`Your choise is: ${'scissors'} and Computer choise is: ${compChoise} so, you are lose`);
+                win++;
+            }
+            else if(compChoise === 'scissors'){
+                console.log(`Your choise is: ${'scissors'} and Computer choise is: ${compChoise} so, you are win`);
+                draw++;
+            }
+            console.log(`Win: ${win}, Lose: ${lose}, Draw: ${draw}`);
+        ">Scissors</button>
+    </div>
+    <script>
+        let draw= 0;
+        let win = 0;
+        let lose = 0;
+    </script>
+</body>
+</html>
