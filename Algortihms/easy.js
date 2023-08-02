@@ -37,3 +37,35 @@ import { letterCapitalize } from "./easy/9_letterCapitalize.js";
 import { simpleSymbols } from "./easy/10_simpleSymbols.js";
 
 //console.log(simpleSymbols("asofjnbaofsunosauf====!@%$#^#^@#%a+assdwr++s++a++eeee+ew="));
+
+import { timeConvert } from "./easy/11_timeConvert.js";
+
+//console.log(timeConvert(3600))
+
+import { alphabetSoup } from "./easy/12_alphabetSoup.js";
+
+//console.log(alphabetSoup("sabri alperen kaya"));
+
+import { abCheck } from "./easy/13_abCheck.js";
+
+//console.log(abCheck("saoihcvnaagtyboishvnoasv"));
+
+import { exOh } from "./easy/14_exOH.js";
+
+//console.log(exOh("xxooxoxoxoxoxoooxxxoxxx"));
+
+import { wordCount } from "./easy/15_wordCount.js";
+
+//console.log(wordCount("Merhaba dunya ben massaka bu bosluklardan her biri kullanildiginda yeni kelimeye geciliyor."));
+
+import { vowelCount } from "./easy/16_vowelCount.js";
+
+//console.log(vowelCount("Merhaba dunya ben massaka bu bosluklardan her biri kullanildiginda yeni kelimeye geciliyor."));
+
+import { isPalindrome } from "./easy/17_isPalindrome.js";
+
+//console.log(isPalindrome("racecar"));
+
+import { arithGeo } from "./easy/18_arithGeo.js";
+
+console.log(arithGeo([2 , 4 , 8 , 16 , 32 , 64 ]));
