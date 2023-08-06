@@ -68,4 +68,16 @@ import { isPalindrome } from "./easy/17_isPalindrome.js";
 
 import { arithGeo } from "./easy/18_arithGeo.js";
 
-console.log(arithGeo([2 , 4 , 8 , 16 , 32 , 64 ]));
+//console.log(arithGeo([2 , 4 , 8 , 16 , 32 , 64 ]));
+
+import { arrayAddition } from "./easy/19_arrayAddition.js";
+
+//console.log(arrayAddition([2,2,4,8,16,32]));
+
+import { letterCount } from "./easy/20_letterCount.js";
+
+//console.log(letterCount("Today, i gonna show you letter count algorithm's how work"));
+
+import { secondGreatLow } from "./easy/21_secondGreatLow.js";
+
+console.log(secondGreatLow([68,15,95,68,42,15,75,75,86,84,25,38,84,96,85,21,5,35,0,36,25,0,0,15,14,23]));
